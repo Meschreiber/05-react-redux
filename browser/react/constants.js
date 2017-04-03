@@ -20,3 +20,6 @@ export const STOP_PLAYING = 'STOP_PLAYING';
 export const SET_CURRENT_SONG = 'SET_CURRENT_SONG';
 export const SET_LIST = 'SET_LIST';
 export const SET_PROGRESS = 'SET_PROGRESS';
+
+//Stations
+//export const DUMMY_STATIONS_DATA = 'DUMMY_STATIONS_DATA';
