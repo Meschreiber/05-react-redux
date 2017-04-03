@@ -35,7 +35,7 @@ class AddSongContainer extends Component {
     addSongToPlaylist(playlistId, songId)
 
   }
-}
+
 
   render() {
 
@@ -55,8 +55,9 @@ class AddSongContainer extends Component {
   }
 }
 
-const mapState = (state) => ({ songs: state.songs, error: this.state.error, songId: this.state.songId })
 
-const mapDispatch = (dispatch) => ({handleChange: this.handleChange, handleSubmit: this.handleSubmit})
+// const mapState = (state) => ({ songs: state.songs, error: this.state.error, songId: this.state.songId })
 
-export default connect(mapState)(AddSongContainer);
+// const mapDispatch = (dispatch) => ({handleChange: this.handleChange, handleSubmit: this.handleSubmit})
+
+export default AddSongContainer;

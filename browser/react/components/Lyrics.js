@@ -2,14 +2,14 @@ import React from 'react';
 
 export default function Lyrics (props) {
 
-  const text = props.lyrics.text;
+  const text = props.text;
   const artistQuery = props.artistQuery;
   const songQuery = props.songQuery;
   const handleSubmit = props.handleSubmit;
 
   const artistChange = e => props.setArtist(e.target.value);
   const songChange = e => props.setSong(e.target.value);
-
+  // console.log('props from lyrics.js', props)
   return (
     <div style={{marginTop: '20px'}}>
       <form onSubmit={handleSubmit}>
