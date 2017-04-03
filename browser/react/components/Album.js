@@ -7,7 +7,8 @@ export default function Album (props) {
   const currentSong = props.currentSong;
   const isPlaying = props.isPlaying;
   const toggleOne = props.toggleOne;
-
+  console.log('from Album.js', props)
+  
   return (
     <div className="album">
       <div>
