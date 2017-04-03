@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 
-import Stations from '../components/stations';
+import Stations from '../components/Stations';
 
 const songsToStations = (songs) => {
 	const stations = {};

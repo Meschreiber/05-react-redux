@@ -13,7 +13,7 @@ export default function Stations(props) {
 	        Object.keys(props.stations).map(stationName => {
 	          return (
 	            <div className="list-group-item" key={stationName}>
-	              <Link to={'fill/me/in/later'}>{stationName}</Link>
+	              <Link to={`/stations/${stationName}`}>{stationName}</Link>
 	            </div>
 	          );
 	        })
