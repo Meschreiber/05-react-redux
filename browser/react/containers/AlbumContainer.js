@@ -12,7 +12,7 @@ const mapState = function (state, ownProps) {
 
 }
 
-const mapDispatch = (dipatch, ownProps) => ({
+const mapDispatch = (dispatch, ownProps) => ({
   toggleOne: function (song, list) {
     dispatch(toggleSong(song, list));
   }

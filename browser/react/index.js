@@ -38,6 +38,8 @@ const onAppEnter = function () {
       store.dispatch(receivePlaylists(playlists));
     });
 
+    store.dispatch(loadAllSongs())
+
 };
 
 const onAlbumEnter = function (nextRouterState) {
@@ -52,9 +54,10 @@ const onPlaylistEnter = function (nextRouterState) {
   const playlistId = nextRouterState.params.playlistId;
   store.dispatch(getPlaylistById(playlistId));
 };
-const onStationsEnter = function () {
-  store.dispatch(loadAllSongs())
-};
+
+// const onStationsEnter = function () {
+//   store.dispatch(loadAllSongs())
+// };
 
 ReactDOM.render(
   <Provider store={store}>
@@ -70,8 +73,8 @@ ReactDOM.render(
       <Route path="/new-playlist" component={NewPlaylistContainer} />
       <Route path="/playlists/:playlistId" component={PlaylistContainer} onEnter={onPlaylistEnter} />
       <Route path="/lyrics" component={LyricsContainer} />
-      <Route path="/stations"  onEnter={onStationsEnter}>
-        <Route path="/stations/:genreName" component={StationContainer} onEnter={onStationsEnter} />
+      <Route path="/stations">
+        <Route path="/stations/:genreName" component={StationContainer} />
         <IndexRoute component={StationsContainer} />
       </Route>
       <IndexRedirect to="/albums" />
